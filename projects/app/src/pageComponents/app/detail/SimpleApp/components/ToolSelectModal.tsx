@@ -371,7 +371,7 @@ const RenderList = React.memo(function RenderList({
                           objectFit={'contain'}
                           borderRadius={'sm'}
                         />
-                        <Box fontWeight={'bold'} ml={3} color={'myGray.900'} flex={'1'}>
+                        <Box fontWeight={'bold'} ml={3} color={'myGray.900'} overflow={'hidden'}>
                           {t(parseI18nString(template.name, i18n.language))}
                         </Box>
                         {isSystemTool && (
@@ -418,6 +418,7 @@ const RenderList = React.memo(function RenderList({
                         {t(parseI18nString(template.name, i18n.language))}
                       </Box>
                     </Box>
+                    <Box flex={1} />
 
                     {selected ? (
                       <Button
